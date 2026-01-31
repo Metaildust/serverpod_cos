@@ -1,18 +1,20 @@
 # serverpod_cos
 
-Tencent COS helper for Serverpod (passwords.yaml -> presigned URL).
+[English](README.md)
 
-## Features
-- Read COS config from `passwords.yaml`
-- `session.cosSigner()` in one line
-- Optional generic endpoint
+Serverpod 的腾讯云 COS 辅助工具包（从 passwords.yaml 读取配置 → 生成预签名 URL）。
+
+## 功能
+- 从 `passwords.yaml` 读取 COS 配置
+- 一行代码调用 `session.cosSigner()`
+- 可选的通用端点
 
 ```yaml
 dependencies:
   serverpod_cos: ^0.1.0
 ```
 
-## passwords.yaml
+## passwords.yaml 配置
 
 ```yaml
 shared:
@@ -20,20 +22,20 @@ shared:
   tencentCosSecretKey: '<TENCENT_SECRET_KEY>'
   tencentCosBucket: '<COS_BUCKET_NAME>'
   tencentCosRegion: '<COS_REGION>'
-  tencentCosCustomDomain: 'https://my-cdn.example.com' # optional
+  tencentCosCustomDomain: 'https://my-cdn.example.com' # 可选
 ```
 
-## Official storage compatibility
+## 官方存储兼容
 
-This package uses **presigned URLs + custom endpoints**.
-For official `CloudStorage` API compatibility, use:
+本包使用 **预签名 URL + 自定义端点**。
+如需官方 `CloudStorage` API 兼容，请使用：
 
 ```yaml
 dependencies:
   serverpod_cloud_storage_cos: ^0.1.0
 ```
 
-## Usage
+## 使用方法
 
 ```dart
 import 'package:serverpod/serverpod.dart';
@@ -51,7 +53,7 @@ class MyEndpoint extends Endpoint {
 }
 ```
 
-## Custom password keys
+## 自定义密钥名称
 
 ```dart
 final signer = session.cosSigner(
@@ -65,13 +67,13 @@ final signer = session.cosSigner(
 );
 ```
 
-## Optional endpoint
+## 可选端点
 
 ```dart
 class CosEndpoint extends ServerpodCosEndpoint {}
 ```
 
-## Maintenance
-- Optional/advanced package; no feature expansion planned.
-- Versioning: SemVer
-- Feedback: issue / PR (not guaranteed timely)
+## 维护
+- 可选/高级包；不计划功能扩展
+- 版本：SemVer
+- 反馈：issue / PR（不保证及时响应）
