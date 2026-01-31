@@ -1,0 +1,11 @@
+name: serverpod_cos
+description: Serverpod helpers for Tencent Cloud COS.
+version: 0.1.1
+repository: https://github.com/Metaildust/gen
+
+environment:
+  sdk: ">=3.8.0 <4.0.0"
+
+dependencies:
+  serverpod: ">=3.0.0 <4.0.0"
+  tencent_cos_dart: ^0.1.0
