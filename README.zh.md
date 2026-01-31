@@ -11,7 +11,7 @@ Serverpod 的腾讯云 COS 辅助工具包（从 passwords.yaml 读取配置 →
 
 ```yaml
 dependencies:
-  serverpod_cos: ^0.1.0
+  serverpod_cos: ^0.1.4
 ```
 
 ## passwords.yaml 配置

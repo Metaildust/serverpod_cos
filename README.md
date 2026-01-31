@@ -11,7 +11,7 @@ Tencent COS helper for Serverpod (passwords.yaml -> presigned URL).
 
 ```yaml
 dependencies:
-  serverpod_cos: ^0.1.0
+  serverpod_cos: ^0.1.4
 ```
 
 ## passwords.yaml
