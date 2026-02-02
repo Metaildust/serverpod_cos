@@ -3,7 +3,9 @@ import 'package:serverpod_cos/serverpod_cos.dart';
 
 class MyEndpoint extends Endpoint {
   Future<String> createUploadUrl(Session session, String objectKey) async {
-    final signer = session.cosSigner();
+    final signer = session.cosSigner(
+      appConfig: CosAppConfig(bucket: 'my-bucket', region: 'ap-guangzhou'),
+    );
     return signer.generatePresignedUrl('PUT', objectKey, expires: 3600);
   }
 }
